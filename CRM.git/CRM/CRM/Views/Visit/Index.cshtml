@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CRMGeneralLayout.cshtml";
+}
+<div class="section-modal " id="feature-modal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-content">
+        <a href="/Default/Default">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div class="container">
+            <h2>Ziyaretler</h2>
+            <br />
+            <div class="row">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#NewVisit">Yeni Ziyaret Kaydı</a></li>
+                    <li><a data-toggle="tab" href="#VisitDetail">Ziyaretlerim</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="NewVisit" class="tab-pane fade in active">
+                        <div class="panel panel-default">
+                            @*<div class="panel-heading"></div>*@
+                            <div class="panel-body">
+                                <div class="form-group row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <input type="button" class=" form-control btn btn-primary btn-group-lg" value="Müşteri Seç" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label id="lblCustomerCodeName" class="control-label">Müşteri Kodu-Adı</label>
+                                        <input type="hidden" id="hdCustomerId" />
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="form-group row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label id="lblCustomerCodeName" class="control-label" for="selCustomerCodeName">Ziyaret Nedeni</label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <select id="selCustomerCodeName" class="form-control">
+                                            <option value="0">Seçiniz</option>
+                                            <option value="0">Tahsilat</option>
+                                            <option value="0">Ziyaret</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <label class="control-label" for="selCustomerCodeName">Ziyaret Sonucu</label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <textarea id="txtVisiResult" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <span class="btn btn-default btn-file form-control">
+                                            <input type="file" multiple="multiple">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <input type="button" value="Kaydet" class="btn btn-primary btn-group-lg form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="VisitDetail" class="tab-pane fade">
+                        <div class="panel panel-default">
+                            @*<div class="panel-heading"></div>*@
+                            <div class="panel-body">
+
+                                <div class="row form-group">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-addon" id="sizing-addon1">Arama</span>
+                                            <input type="text" class="form-control" placeholder="Aranacak Metin" aria-describedby="sizing-addon1">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-primary" type="button">Ara</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <table class="table" data-search="true" data-toggle="table" data-locale="tr-TR" data-height="450" data-pagination="true"
+                                           data-page-size="5">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Kodu</th>
+                                                <th>Ünvanı</th>
+                                                <th>Telefon</th>
+                                                <th>Fax</th>
+                                                <th>Gsm</th>
+                                                <th>Düzenle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#</td>
+                                                <td>Kodu</td>
+                                                <td>Ünvanı</td>
+                                                <td>Telefon</td>
+                                                <td>Fax</td>
+                                                <td>Gsm</td>
+                                                <td class="text-center">
+                                                    <span class="cursor-pointer fa fa-edit hidden-lg hidden-md hidden-print"></span>
+                                                    <input type="button" class="btn btn-success hidden-sm hidden-xs" value="Düzenle" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -8,8 +8,14 @@ namespace CRM
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/bootstrap-table.css",
+                      "~/Content/common/font-awesome.min.css",
+                      "~/Content/common/animate.css",
+                      "~/Content/common/style.css"
+                      ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -21,11 +27,19 @@ namespace CRM
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap-table/bootstrap-table.js",
+                      "~/Scripts/bootstrap-table/locale/bootstrap-table-tr-TR.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/common/jquery.appear.js",
+                        "~/Scripts/common/contact_me.js",
+                        "~/Scripts/common/jqBootstrapValidation.js",
+                        "~/Scripts/common/modernizr.custom.js",
+                        "~/Scripts/common/script.js"
+                        ));
+
         }
     }
 }

@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Default";
+    Layout = "~/Views/Shared/_CRMGeneralLayout.cshtml";
+}
+
+<!-- Start Main Body Section -->
+<div class="mainbody-section text-center">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="menu-item light-orange">
+                    <a href="/Pages/Customers" data-toggle="modal">
+                        <i class="fa fa-users"></i>
+                        <p>Müşteriler</p>
+                    </a>
+                </div>
+                <div class="menu-item color">
+                    <a href="#clients-modal" data-toggle="modal">
+                        <i class="fa fa-comment-o"></i>
+                        <p>Mesajlaşma</p>
+                    </a>
+                </div>
+
+                @*<div class="menu-item green">
+                        <a href="#portfolio-modal" data-toggle="modal">
+                            <i class="fa fa-file-photo-o"></i>
+                            <p>Portfolio</p>
+                        </a>
+                    </div>*@
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="menu-item purple">
+                    <a href="#pricing-modal" data-toggle="modal">
+                        <i class="fa fa-usd"></i>
+                        <p>Satışlar</p>
+                    </a>
+                </div>
+
+
+                <div class="menu-item color">
+                    <a href="#service-modal" data-toggle="modal">
+                        <i class="fa fa-area-chart"></i>
+                        <p>Raporlar</p>
+                    </a>
+                </div>
+
+                @*<div class="menu-item blue">
+                        <a href="#feature-modal" data-toggle="modal">
+                            <i class="fa fa-magic"></i>
+                            <p>Feature</p>
+                        </a>
+                    </div>*@
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="menu-item light-red">
+                    <a href="/Visit/Index" data-toggle="modal">
+                        <i class="fa fa-envelope-o"></i>
+                        <p>Ziyaretler</p>
+                    </a>
+                </div>
+
+
+                @*<div class="menu-item light-red">
+                        <a href="#about-modal" data-toggle="modal">
+                            <i class="fa fa-user"></i>
+                            <p>Kişisel</p>
+                        </a>
+                    </div>*@
+
+                <div class="menu-item blue">
+                    <a href="#news-modal" data-toggle="modal">
+                        <i class="fa fa-bars"></i>
+                        <p>Ayarlar</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Body Section -->

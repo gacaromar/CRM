@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = "Müşteriler";
+    Layout = "~/Views/Shared/_CRMGeneralLayout.cshtml";
+}
+<!-- Start Feature Section -->
+<div class="section-modal " id="feature-modal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-content">
+        <a href="/Default/Default">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h3>Müşteriler</h3>
+                    <p>Müşteriler üzerinde düzenleme ve inceleme yapabilirsiniz!</p>
+                </div>
+            </div>
+            <!--Başlık-->
+            <div class="row form-group">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon2">Kodu</span>
+                        <input type="text" class="form-control" placeholder="Kodu" aria-describedby="sizing-addon2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon3">Adı</span>
+                        <input type="text" class="form-control" placeholder="Adı" aria-describedby="sizing-addon3">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon4">Şehir</span>
+                        <input type="text" class="form-control" placeholder="Şehir" aria-describedby="sizing-addon4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon" id="sizing-addon1">Arama</span>
+                        <input type="text" class="form-control" placeholder="Aranacak Metin" aria-describedby="sizing-addon1">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Ara</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--Liste-->
+            <div class="row">
+                <table class="table" data-search="true" data-toggle="table" data-locale="tr-TR" data-height="450" data-pagination="true"
+                       data-page-size="5">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Kodu</th>
+                            <th>Ünvanı</th>
+                            <th>Telefon</th>
+                            <th>Fax</th>
+                            <th>Gsm</th>
+                            <th>Düzenle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td>Kodu</td>
+                            <td>Ünvanı</td>
+                            <td>Telefon</td>
+                            <td>Fax</td>
+                            <td>Gsm</td>
+                            <td class="text-center">
+                                <span class="cursor-pointer fa fa-edit hidden-lg hidden-md hidden-print"></span>
+                                <input type="button" class="btn btn-success hidden-sm hidden-xs" value="Düzenle" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="divEdit" aria-hidden="false" class="row">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Kodu</span>
+                            <input type="text" class="form-control" placeholder="Kodu" aria-describedby="sizing-addon2" readonly>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Ünvanı</span>
+                            <input type="text" class="form-control" placeholder="Ünvanı" aria-describedby="sizing-addon2" readonly>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">İl</span>
+                            <input type="text" class="form-control" placeholder="İl" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">İlçe</span>
+                            <input type="text" class="form-control" placeholder="İlçe" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Tel-1</span>
+                            <input type="text" class="form-control" placeholder="Tel-1" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Tel-2</span>
+                            <input type="text" class="form-control" placeholder="Tel-2" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Tel-1</span>
+                            <input type="text" class="form-control" placeholder="Gsm-1" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Gsm-2</span>
+                            <input type="text" class="form-control" placeholder="Gsm-2" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Fax</span>
+                            <input type="text" class="form-control" placeholder="Fax" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Adres</span>
+                            <input type="text" class="form-control" placeholder="Adres" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-magic"></i>
+                            <div class="feature-content">
+                                <h4>Web Design</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-gift"></i>
+                            <div class="feature-content">
+                                <h4>Graphics Design</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-wordpress"></i>
+                            <div class="feature-content">
+                                <h4>Wordpress Theme</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-plug"></i>
+                            <div class="feature-content">
+                                <h4>Wordpress Plugin</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-joomla"></i>
+                            <div class="feature-content">
+                                <h4>Joomla Template</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-cube"></i>
+                            <div class="feature-content">
+                                <h4>Joomla Extension</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-css3"></i>
+                            <div class="feature-content">
+                                <h4>HTML 5 & CSS3</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-android"></i>
+                            <div class="feature-content">
+                                <h4>Android Apps</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-6 -->
+                </div>*@
+            <!-- /.row -->
+        </div>
+
+    </div>
+</div>
+<!-- End Feature Section -->
